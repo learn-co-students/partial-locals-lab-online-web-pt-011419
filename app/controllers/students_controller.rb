@@ -22,7 +22,7 @@ class StudentsController < ApplicationController
 
   def index
     @students = Student.all
-  end
+end
 
   def student_params
     params.require(:student).permit(:name, :birthday, :hometown)
