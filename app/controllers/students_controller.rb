@@ -17,11 +17,11 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @student = Student.find(params[:id])
+    @student = Student.search(params[:name])
   end
 
   def index
-    @students = Student.all
+    @students = Student.all.count
   end
 
   def student_params
