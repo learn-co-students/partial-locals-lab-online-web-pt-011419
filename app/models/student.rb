@@ -18,7 +18,7 @@ class Student < ActiveRecord::Base
       if search.empty?
           Student.all
       else 
-          self.all.where("name = :search")
+          where('name LIKE ?', "%#{search}%")
       end 
   end
 end
